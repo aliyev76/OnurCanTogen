@@ -1,0 +1,187 @@
+/* 90s AESTHETIC STYLESHEET - WARNING: EXTREME CSS */
+
+body {
+    background-color: #000080; /* Navy Blue background common in 90s */
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png'); /* Subtle starry background */
+    color: #FFFF00; /* Yellow text */
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Container to keep things somewhat centered but chaotic */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #000000;
+    border: 5px ridge #FFD700; /* Gold ridge border */
+    padding: 20px;
+    box-shadow: 10px 10px 0px #808080;
+}
+
+/* HEADINGS */
+h1 {
+    font-family: 'Impact', 'Charcoal', sans-serif;
+    font-size: 4rem;
+    color: #FF00FF; /* Magenta */
+    text-shadow: 4px 4px 0px #00FF00; /* Green shadow */
+    letter-spacing: 5px;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    color: #00FFFF; /* Cyan */
+    text-shadow: 2px 2px #FF0000; /* Red shadow */
+}
+
+h3 {
+    color: #FFA500; /* Orange */
+    font-style: italic;
+}
+
+/* BLINK ANIMATION */
+.blink {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* RAINBOW TEXT */
+.rainbow-text {
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+/* IMAGES */
+.hero-image-frame {
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    padding: 10px;
+    display: inline-block;
+    animation: border-dance 4s linear infinite;
+}
+
+@keyframes border-dance {
+    0% {filter: hue-rotate(0deg);}
+    100% {filter: hue-rotate(360deg);}
+}
+
+.profile-pic {
+    width: 300px;
+    height: auto;
+    border: 5px solid #FFFFFF;
+    filter: contrast(150%) saturate(200%); /* Fried meme look */
+}
+
+.project-img {
+    border: 5px dotted #FF00FF;
+    margin: 10px;
+}
+
+/* SECTIONS */
+.card {
+    border: 3px double #FFFFFF;
+    background-color: #000040;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.highlight {
+    background-color: #FF0000;
+    color: #FFFFFF;
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+.fancy-line {
+    border: 0;
+    height: 3px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 0, 0.75), rgba(0, 0, 0, 0));
+    margin: 30px 0;
+}
+
+/* PORTFOLIO */
+.portfolio {
+    border: 5px dashed #00FF00;
+    padding: 20px;
+    background-color: #200020;
+}
+
+.project {
+    background-color: #000000;
+    border: 2px solid #FFFF00;
+    margin: 15px;
+    padding: 10px;
+}
+
+.project-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* CONTACT */
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.contact-list li {
+    margin: 20px 0;
+    border-bottom: 1px dashed #FFFFFF;
+    padding-bottom: 10px;
+}
+
+a {
+    color: #00FF00;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #000000;
+    padding: 2px 5px;
+}
+
+a:hover {
+    color: #FF0000;
+    background-color: #FFFF00;
+    text-decoration: blink;
+    cursor: help;
+}
+
+.phone-number {
+    font-size: 1.5rem;
+    color: #FF00FF;
+    text-shadow: 2px 2px #FFFFFF;
+}
+
+/* HIT COUNTER */
+.hit-counter {
+    background-color: #C0C0C0;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    display: inline-block;
+    padding: 5px;
+    border: 2px inset #FFFFFF;
+    margin-top: 10px;
+}
+
+/* BUTTONS (if any) */
+button {
+    background-color: #C0C0C0;
+    border: 3px outset #FFFFFF;
+    cursor: pointer;
+    font-family: 'Comic Sans MS';
+}
+
+button:active {
+    border: 3px inset #FFFFFF;
+}

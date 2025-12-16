@@ -1,187 +1,272 @@
-/* 90s AESTHETIC STYLESHEET - WARNING: EXTREME CSS */
+/* ROYAL SHRINE STYLESHEET */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@1,400;1,700&display=swap');
 
 body {
-    background-color: #000080; /* Navy Blue background common in 90s */
-    background-image: url('https://www.transparenttextures.com/patterns/stardust.png'); /* Subtle starry background */
-    color: #FFFF00; /* Yellow text */
-    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
-    text-align: center;
+    background-color: #050000;
+    /* Almost black */
+    background-image:
+        radial-gradient(circle at 50% 50%, #200000 0%, #000000 80%),
+        url('https://www.transparenttextures.com/patterns/black-linen.png');
+    color: #C0C0C0;
+    /* Silver text */
+    font-family: 'Playfair Display', serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    text-align: center;
 }
 
-/* Container to keep things somewhat centered but chaotic */
-.container {
-    width: 80%;
+.shrine-container {
+    max-width: 900px;
     margin: 0 auto;
-    background-color: #000000;
-    border: 5px ridge #FFD700; /* Gold ridge border */
-    padding: 20px;
-    box-shadow: 10px 10px 0px #808080;
+    border-left: 10px solid #800000;
+    /* Deep Red borders */
+    border-right: 10px solid #800000;
+    background-color: #100000;
+    padding-bottom: 50px;
+    box-shadow: 0 0 50px #FFD700;
+    /* Gold ambient glow */
 }
 
-/* HEADINGS */
-h1 {
-    font-family: 'Impact', 'Charcoal', sans-serif;
-    font-size: 4rem;
-    color: #FF00FF; /* Magenta */
-    text-shadow: 4px 4px 0px #00FF00; /* Green shadow */
+/* HEADER */
+.royal-header {
+    padding: 50px 20px;
+    border-bottom: 5px solid #FFD700;
+    background: linear-gradient(180deg, #300000 0%, #100000 100%);
+}
+
+.shining-text {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    color: #FFD700;
+    /* Gold */
+    text-transform: uppercase;
     letter-spacing: 5px;
-    margin-bottom: 0;
+    margin: 0;
+    text-shadow:
+        0 0 10px #FFD700,
+        0 0 20px #FF8C00,
+        0 0 30px #FF0000;
+    animation: shine 3s infinite alternate;
 }
 
-h2 {
-    font-family: 'Courier New', Courier, monospace;
-    color: #00FFFF; /* Cyan */
-    text-shadow: 2px 2px #FF0000; /* Red shadow */
-}
+@keyframes shine {
+    0% {
+        text-shadow: 0 0 10px #FFD700;
+        opacity: 1;
+    }
 
-h3 {
-    color: #FFA500; /* Orange */
-    font-style: italic;
-}
-
-/* BLINK ANIMATION */
-.blink {
-    animation: blinker 1s linear infinite;
-}
-
-@keyframes blinker {
-    50% {
-        opacity: 0;
+    100% {
+        text-shadow: 0 0 40px #FFFFE0, 0 0 80px #FFD700;
     }
 }
 
-/* RAINBOW TEXT */
-.rainbow-text {
-    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
-    -webkit-background-clip: text;
-    color: transparent;
-    font-weight: bold;
-}
-
-/* IMAGES */
-.hero-image-frame {
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    padding: 10px;
-    display: inline-block;
-    animation: border-dance 4s linear infinite;
-}
-
-@keyframes border-dance {
-    0% {filter: hue-rotate(0deg);}
-    100% {filter: hue-rotate(360deg);}
-}
-
-.profile-pic {
-    width: 300px;
-    height: auto;
-    border: 5px solid #FFFFFF;
-    filter: contrast(150%) saturate(200%); /* Fried meme look */
-}
-
-.project-img {
-    border: 5px dotted #FF00FF;
-    margin: 10px;
-}
-
-/* SECTIONS */
-.card {
-    border: 3px double #FFFFFF;
-    background-color: #000040;
-    padding: 15px;
-    margin: 20px 0;
-}
-
-.highlight {
-    background-color: #FF0000;
+.subtitle {
     color: #FFFFFF;
-    padding: 0 5px;
-    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    margin-top: 10px;
+    font-weight: lighter;
+    opacity: 0.9;
 }
 
-.fancy-line {
-    border: 0;
-    height: 3px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 0, 0.75), rgba(0, 0, 0, 0));
-    margin: 30px 0;
+.crown-icon {
+    font-size: 3rem;
+    margin-top: 20px;
+    animation: float 3s ease-in-out infinite;
 }
 
-/* PORTFOLIO */
-.portfolio {
-    border: 5px dashed #00FF00;
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* LEGEND HERO SECTION */
+.legend-section {
+    padding: 40px;
+    background-image: url('https://www.transparenttextures.com/patterns/diagmonds-light.png');
+}
+
+.portrait-frame {
+    display: inline-block;
     padding: 20px;
-    background-color: #200020;
+    background: #400000;
+    border: 8px solid #FFD700;
+    outline: 4px solid #800000;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+    position: relative;
 }
 
-.project {
-    background-color: #000000;
-    border: 2px solid #FFFF00;
-    margin: 15px;
-    padding: 10px;
+.portrait-frame::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border: 2px solid #FFD700;
+    z-index: 1;
 }
 
-.project-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+.legend-img {
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+    filter: sepia(20%) contrast(110%);
+    display: block;
 }
 
-/* CONTACT */
-.contact-list {
-    list-style-type: none;
-    padding: 0;
-    font-size: 1.2rem;
+.gold-glow {
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
 }
 
-.contact-list li {
-    margin: 20px 0;
-    border-bottom: 1px dashed #FFFFFF;
+.legend-quote {
+    font-size: 1.8rem;
+    font-style: italic;
+    color: #FFD700;
+    margin-top: 20px;
+    font-family: 'Cinzel', serif;
+}
+
+/* ATTRIBUTES */
+.attributes {
+    padding: 20px;
+}
+
+.section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    border-bottom: 2px solid #FFD700;
+    display: inline-block;
+    margin-bottom: 40px;
     padding-bottom: 10px;
 }
 
-a {
-    color: #00FF00;
-    text-decoration: none;
-    font-weight: bold;
-    background-color: #000000;
-    padding: 2px 5px;
+.attribute-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-a:hover {
-    color: #FF0000;
-    background-color: #FFFF00;
-    text-decoration: blink;
-    cursor: help;
+.attribute-card {
+    background-color: #1A0505;
+    border: 2px solid #D4AF37;
+    /* Metallic Gold */
+    width: 250px;
+    padding: 15px;
+    transition: transform 0.3s;
 }
 
-.phone-number {
-    font-size: 1.5rem;
-    color: #FF00FF;
-    text-shadow: 2px 2px #FFFFFF;
+.attribute-card:hover {
+    transform: scale(1.05);
+    background-color: #2A0A0A;
 }
 
-/* HIT COUNTER */
-.hit-counter {
-    background-color: #C0C0C0;
-    color: #000000;
-    font-family: 'Courier New', Courier, monospace;
-    display: inline-block;
-    padding: 5px;
-    border: 2px inset #FFFFFF;
+.attribute-img-wrapper {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border: 1px solid #555;
+    margin-bottom: 15px;
+}
+
+.attribute-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.attribute-card h3 {
+    color: #FFD700;
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+/* GALLERY */
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery img {
+    height: 150px;
+    border: 2px solid #FFF;
+    transition: all 0.5s;
+    filter: grayscale(100%);
+}
+
+.gallery img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.2);
+    z-index: 10;
+    border-color: #FFD700;
+    box-shadow: 0 0 20px #FFD700;
+}
+
+.worship-note {
+    font-style: italic;
+    color: #888;
     margin-top: 10px;
 }
 
-/* BUTTONS (if any) */
-button {
-    background-color: #C0C0C0;
-    border: 3px outset #FFFFFF;
-    cursor: pointer;
-    font-family: 'Comic Sans MS';
+/* VIP ACCESS */
+.exclusive-access {
+    margin: 50px 20px;
 }
 
-button:active {
-    border: 3px inset #FFFFFF;
+.vip-card {
+    border: 5px double #FFD700;
+    padding: 40px;
+    background: radial-gradient(#300000, #000000);
+    position: relative;
+    overflow: hidden;
+}
+
+.vip-card h2 {
+    color: #FFD700;
+    font-family: 'Cinzel', serif;
+}
+
+.vip-details {
+    margin-top: 30px;
+    font-size: 1.3rem;
+    line-height: 2;
+}
+
+.vip-details a {
+    color: #FFF;
+    text-decoration: none;
+    border-bottom: 1px dotted #FFD700;
+}
+
+.gold-text {
+    color: #FFD700;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* FOOTER */
+footer {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    color: #666;
+}
+
+.footer-frame {
+    border: 1px solid #333;
+    display: inline-block;
+    padding: 10px 50px;
 }
